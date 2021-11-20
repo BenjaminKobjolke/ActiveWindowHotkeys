@@ -50,19 +50,31 @@ Hotkeys that work on a specific window are defined this way
 
     ```#IfWinActive, Mozilla Firefox```
 
-3. add a description for the help 
-
-    ``` ; Firefox Hotkeys ```
-
-4. add your hotkeys, for example you want alt and r to trigger F5 in firefox
+3. add your hotkeys
+    
+    For example you want alt and r to trigger F5 in firefox
 
     ```
-    !r::
     ; Reload page
+    !r::    
         Send, F5
     return
+    ```
 
-5. restart ActiveWindowHotkeys.exe
+    **Explanation**
+
+    `; Reload page` is for the help window when you press F10
+
+    `!r::` is the hotkey combination that you need to press
+
+    `Send, F5` is the command that you want to send to the application
+
+    `return` the end of your hotkey
+
+
+
+
+4. restart ActiveWindowHotkeys.exe
 
 ---
 
