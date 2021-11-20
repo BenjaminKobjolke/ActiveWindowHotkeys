@@ -1,5 +1,22 @@
 # ActiveWindowHotkeys
-Windows application that makes the same hotkey trigger a unique action for the current window
+Windows application that makes the same hotkey trigger a unique action for the active window.
+
+Most of the time the F keys on your keyboard (F1 - F12) are unused.
+
+## Why
+
+Because usually the developers plays functions for first time users on those keys.
+Like F1 opens the help files most of the time.
+But how often do you actually use that?
+
+What if you could finally use those keys for those shortcuts you use all the time?
+Maybe for those shortcuts that are hard to remembers and require multiple keys to be pressed at once?
+
+**Here is the solution**
+
+This application allows you to create new hotkeys.
+
+---
 
 ## Installation
 Run ActiveWindowHotkeys.exe
@@ -57,6 +74,18 @@ You can find the documentation for the hotkey syntax here:
 [Autohotkey Hotkeys](https://www.autohotkey.com/docs/Hotkeys.htm)
 
 #### Most important hotkeys
+
+**F keys**
+Example
+F1 to open a new tab in chrome
+
+```
+F1::
+; new tab
+    Send, ^+t
+return
+```
+
 
 **\# = winkey**
 
@@ -141,7 +170,7 @@ Example notepad++
 
 You can then use this information for your hotkeys.
 
-* using the title* 
+**using the title** 
 
 ```
 #IfWinActive, - Notepad++
@@ -152,7 +181,7 @@ You can then use this information for your hotkeys.
 return
 ```
 
-* using the ahk_class* 
+**using the ahk_class** 
 
 ```
 #IfWinActive, ahk_class Notepad++
@@ -163,7 +192,7 @@ return
 return
 ```
 
-* using the ahk_exe* 
+**using the ahk_exe** 
 
 ```
 #IfWinActive, ahk_exe notepad++.exe

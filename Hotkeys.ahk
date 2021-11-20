@@ -30,6 +30,10 @@ return
 return
 
 #IfWinActive, - Google Chrome
+; new tab
+F1::
+    Send, ^t
+return
 ; ctrl and right arrow to go to the next tab
 ^Right::
 	Send, ^{PgDn}
