@@ -5,7 +5,7 @@ Most of the time the F keys on your keyboard (F1 - F12) are unused.
 
 ## Why
 
-Because usually the developers plays functions for first time users on those keys.
+Because usually the developers place functions for first time users on those keys.
 Like F1 opens the help files most of the time.
 But how often do you actually use that?
 
