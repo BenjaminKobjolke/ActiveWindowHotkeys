@@ -9,6 +9,9 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, 2
 
+; Load editor path from INI
+IniRead, editorPath, settings.ini, Editor, Path, %A_Space%
+
 if (!a_iscompiled) {
 	Menu, tray, icon, icon.ico,0,1
 	Menu, tray, add, Edit 
@@ -254,13 +257,24 @@ Reload:
 return 
 
 Edit:
-	Run, C:\Program Files (x86)\Notepad++\notepad++.exe "%A_ScriptFullPath%"
+    ; Check if we have a valid editor path
+    if (editorPath = "" || !FileExist(editorPath)) {
+        ; Ask user to select an editor
+        FileSelectFile, selectedPath, 3, , Select your text editor, Applications (*.exe)
+        if (selectedPath = "") {
+            MsgBox, No editor was selected. Using default Notepad.
+            editorPath := "notepad.exe"
+        } else {
+            editorPath := selectedPath
+            ; Save the selected path to INI
+            IniWrite, %editorPath%, settings.ini, Editor, Path
+        }
+    }
+    
+    ; Run the editor with Hotkeys.ahk instead of the current script
+    Run, %editorPath% "%A_ScriptDir%\Hotkeys.ahk"
 return
 
 Exit:
 	ExitApp
 return
-
-
-	
-

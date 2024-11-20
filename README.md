@@ -34,8 +34,11 @@ and
 
 > ; ALL WINDOWS END
 
-The default hotkey to show the Help is `F10` 
-There is also a global hotkey `shift F9` to move the mouse cursor to the center of the current window.
+Default hotkeys:
+- `F10` Show a popup with the available shortcuts for the current window
+- `shift F9` move the mouse cursor to the center of the current window
+- `alt F9` open a text editor with Hotkeys.ahk
+- `ctrl F9` to reload the main script and Hotkeys.ahk
 
 ---
 

@@ -4,6 +4,19 @@ F10::
 	GoSub, generateHelp
 return
 
+; Reload Main script and Hotkeys.ahk
+^F9::
+	ToolTip, Reloading ActiveWindowHotkeys...
+	Sleep, 1000
+	ToolTip,
+	Reload
+return
+
+; Edit Hotkey.ahk
+!F9::
+	GoSub, Edit
+return
+
 ; Move mouse to current window
 +F9::
     WinGetPos, winTopL_x, winTopL_y, width, height, A
