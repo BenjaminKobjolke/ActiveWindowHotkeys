@@ -19,7 +19,8 @@ This application allows you to create new hotkeys.
 ---
 
 ## Installation
-Run ActiveWindowHotkeys.exe
+Run install.bat
+This will copy Hotkeys_example.ahk to Hotkeys.ahk
 
 ## Configuration
 Open Hotkeys.ahk in a text editor
@@ -34,7 +35,7 @@ and
 > ; ALL WINDOWS END
 
 The default hotkey to show the Help is `F10` 
-There is also a global hotkey `F9` to move the mouse cursor to the center of the current window.
+There is also a global hotkey `shift F9` to move the mouse cursor to the center of the current window.
 
 ---
 
