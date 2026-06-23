@@ -1,7 +1,13 @@
-﻿; ALL WINDOWS START
+﻿﻿; This file is config only and must be loaded by ActiveWindowHotkeys.ahk.
+if (!A_IsCompiled && A_ScriptName != "ActiveWindowHotkeys.ahk") {
+	MsgBox, Run ActiveWindowHotkeys.ahk, not Hotkeys.ahk.
+	ExitApp
+}
+
+; ALL WINDOWS START
 ; Show help
 F10::
-	GoSub, generateHelp
+	GoSub, % "generateHelp"
 return
 
 ; Reload Main script and Hotkeys.ahk
